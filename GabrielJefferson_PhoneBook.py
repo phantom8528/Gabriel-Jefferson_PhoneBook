@@ -11,6 +11,7 @@ Please Type The Number Corresponding with the following options\n
 4. List all entries\n
 5. Quit\n
 ==================================='''
+
 #________________FUNCTIONS_______________________________
 
 def verify_option_input(input): #<-- created a function that verifies that the option inputted is the option available
@@ -22,6 +23,7 @@ def verify_option_input(input): #<-- created a function that verifies that the o
 
 def add_an_entry():
     global entName
+    global entNumb #<---- Made it global, ,just incase
     entName = input("\nEnter Name: ") #<-- Just added some spacing
     entNumb = input("\nEnter Number: ")#<-- Just added some spacing
     phone_book_entries[entName] = entNumb
@@ -40,8 +42,11 @@ def delete_contact():
     removeInput = input("Who Are We Removing: ")
     phone_book_entries.pop(removeInput)
     print("Contact Successfully Removed.\n")
+
 #_________________WHILE AND IF STATEMENTS__________________________
 phone_book_entries = {} #<---Dictionary for phone book
+long_term_storage = {} #<----Dictionary that goes into textx file
+
 while not(terminate_prog):
 
     print (instruction_menu)
@@ -58,6 +63,8 @@ while not(terminate_prog):
     elif user_input == 2: #<-- Inserting an entry
         #pass
         add_an_entry()
+        #add_to_file()
+        #test_file_exists()
     elif user_input == 3: #<-- Deleting an entry
         #pass
         delete_contact()
