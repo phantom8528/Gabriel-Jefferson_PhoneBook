@@ -45,7 +45,7 @@ def delete_contact():
 
 #_________________WHILE AND IF STATEMENTS__________________________
 phone_book_entries = {} #<---Dictionary for phone book
-long_term_storage = {} #<----Dictionary that goes into textx file
+long_term_storage = {} #<---- Dictionary that goes into text file
 
 while not(terminate_prog):
 
