@@ -1,8 +1,6 @@
 #Name: Gabriel Jefferson
 #Assignment: Module 2, Day 5, PhoneBook.py
 
-
-
 terminate_prog = False
 instruction_menu = '''\nGabriel's Electronic Phone Book\n
 ==================================\n
